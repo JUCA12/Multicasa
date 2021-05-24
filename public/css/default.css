@@ -47,8 +47,20 @@ body{
 #main{
     position: relative;
     width: 1022px;
-    background-color: white;
+    background-image:url(../img/house3.jpg);
+    background-repeat: no-repeat;
+    background-size: 2044px;
+    background-position-x: right;
+    background-position-y: bottom;
     left: 0px;
+}
+
+#btn_registrar{
+    background-color: #4CAF50;
+    color: white;padding: 8px 20px;
+    border: none;border-radius: 8px;
+    cursor: pointer;float:  right;
+    font-weight:bold;
 }
 
 .center{

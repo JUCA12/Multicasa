@@ -13,8 +13,12 @@
             $_SESSION['id_usuario'] = $results['id_Usuario'];
             $_SESSION['nombre'] = $results['Nombre'];
             $_SESSION['privilegios'] = $results['Privilegios'];
-            header('Location: http://localhost/multicasa/main');
             
+            if($_SESSION['privilegios']=='A'){
+                header('Location: http://localhost/multicasa/admin');
+            }else{
+                header('Location: http://localhost/multicasa/main');
+            }
         }else{
             $message = "credenciales no validas";
         }

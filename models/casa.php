@@ -6,11 +6,12 @@
         public $calle_num;
         public $colonia;
         public $ciudad;
+        public $estado;
         public $cp;
         public $imagen;
         public $precio;
         public $recamaras;
-        public $baños;
+        public $banos;
 
     }
 ?>
