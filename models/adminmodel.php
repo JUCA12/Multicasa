@@ -57,7 +57,7 @@ class adminModel extends Model{
                 $item -> baños = $row['baños'];
             }
             return $item;
-        }catch(PDOException $e){
+        }catch(PDOExcexption $e){
             return [];
         }
     }

@@ -34,6 +34,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in</title>
+
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.min.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/default.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.css"><?php // echo constant es para usar url absolutas ?>
+    
 </head>
 <body>
     <?php require 'views/header.php'; ?>
@@ -46,15 +51,16 @@
         
 
             <form action="<?php echo constant('URL'); ?>login" method="post">
-                <label for="txtuser">Usuario:</label>
+                <br><br><br><br><br><br>
+                <label for="txtuser" style="color:white;font-size:18px">Usuario:</label>
                 <br>
                 <input type="text" name="txtuser" id="txtuser" placeholder="Introducir Usuario..." required >
                 <br>
-                <label for="txtuser">Contraseña:</label>
+                <label for="txtuser" style="color:white;font-size:18px">Contraseña:</label>
                 <br>
                 <input type="password" name="txtpassword" id="txtpassword" placeholder="Introducir Contraseña..." required >
                 <br>
-                <input type="submit" value = "Entrar">
+                <input type="submit" value = "Entrar" style="color:white;font-size:18px;font-weight:bold">
             </form>
             </center>
             <?php require 'views/menu.php'; ?>

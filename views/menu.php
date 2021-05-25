@@ -1,3 +1,4 @@
+<form action="cliente/searchById" method="post">
 <div id="lateral">
         <div id= "botones_lateral"> 
             <ul class="botones_lateral">
@@ -22,27 +23,33 @@
             <form action="" method="post">
             <div id="campos">
                 <label for="cp">Ciudad y estado, o CP</label>
-                <input type="text">
-                <label for="rango">Rango de busqueda</label>
+                <input type="text" name="txt_CEP" placeholder="Ingrese Ciudad, Estado o CP" id="txt_CEP">
                 <br>
-                <select name="rango" id="rango">
-                </select>
-                <br>
+
                 <label for="rango">Rango de precio DE: A:</label>
                 <br>
-                 <select name="rango" id="rango">
-                </select>
-                 <select name="rango" id="rango">
+                 <select name="rango_precios" id="rango_precios">   
+                    <option value="400.000">$250.000 a $400.000</option>
+                    <option value="900.000">$450.000 a $900.000</option>
+                    <option value="1.200.000">$900.000 a $1.200.000</option>
                 </select>
                 <br>
+
                 <label for="recamaras">Recamaras</label>
                 <br>
-                 <select name="recamars" id="recamaras">
+                 <select name="recamaras" id="recamaras">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
                 <br>
+                
                 <label for="banos">Baños</label>
                 <br>
                  <select name="banos" id="banos">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select>
                 <br>
                 <input type="submit" id ="btnbuscar" value="Buscar">
@@ -62,3 +69,4 @@
             </div>
         </div>
 </div>
+</form>

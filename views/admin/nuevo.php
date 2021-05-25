@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/estilos.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.min.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/default.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.css"><?php // echo constant es para usar url absolutas ?>
     <title>Editar</title>
 </head>
 <body>
@@ -12,9 +15,9 @@
     <div id="main">
         <h1>Registro de Vivienda</h1>
 
-        <div class="center"><?php echo $this -> mensaje; ?></div> 
+        <div><?php echo $this -> mensaje; ?></div> 
 
-        <form action="<?php echo constant('URL'); ?>nuevo/registrarCasa" method="post">
+        <form action="<?php echo constant('URL'); ?>nuevo/registrarCasa" method="post" onsubmit="return valida_form_index();">
             <p>
                 
                 <label for="casa_id">Casas_ID:</label><br>
@@ -22,7 +25,8 @@
             </p>
             <p>
                 <label for="nombre">Nombre:</label><br>
-                <input type="text" name="txtnombre_casa" placeholder="Ingrese el nombre de la vivienda..." id="txtnombre_casa">
+                <input type="text" name="txtnombre_casa" placeholder="Ingrese el nombre de la vivienda..." id="txtnombre_casa"
+                required="true"  oninvalid="this.setCustomValidity('El nombre es invalido');" >
             </p>
             <p>
                 <label for="calle_num">Calle y Número:</label><br>

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/estilos.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.min.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/default.css"><?php // echo constant es para usar url absolutas ?>
+    <link rel="stylesheet" href="<?php echo constant('URL'); ?>public/css/bootstrap.css"><?php // echo constant es para usar url absolutas ?>
     <title>Editar</title>
 </head>
 <body>
@@ -12,9 +15,9 @@
     <div id="main">
         <h1 class="center"><?php echo $this -> casa -> nombre; ?></h1>
 
-        <div class="center"><?php echo $this -> mensaje; ?></div> 
+        <div><?php echo $this -> mensaje; ?></div> 
 
-        <form action="<?php echo constant('URL'); ?>admin/actualizarCasa" method="post">
+        <form action="<?php echo constant('URL'); ?>admin/actualizarCasa" method="post" onsubmit="return valida_form_index();">
             <p>
                 
                 <label for="casa_id">Casas_ID:</label><br>

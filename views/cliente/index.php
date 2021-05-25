@@ -13,37 +13,13 @@
 </head>
 <body>
     <?php require 'views/header.php';
-          session_start();
-          $priv = $_SESSION['privilegios'];
-          echo $priv;
-          if($priv=='A'){
-          ?>
-		 <script type="text/javascript">
-		 alert("Hello Usuario");		
-
-         document.getElementById('btn_registrar').style.display = 'block';
-		
-		</script> 
-        <?php
-        }else{
-        ?>
-            <script type="text/javascript">
-		 alert("Hello Usuario");		
-
-         document.getElementById('btn_registrar').style.display = 'none';
-		
-		</script>
-        <?php 
-        }
+        
         ?>
         <div id="main">
             <div>
                 <h1 style="color:white">Listado de Casas</h1>
             </div>
-            <div>
-                <a id="btn_registrar" 
-                href="<?php echo constant('URL'); ?>nuevo">Registrar</a>
-            </div>
+            <br><br>
             <div>
                 <table width="100%" class="table">
                     <thead>
@@ -80,10 +56,6 @@
                         <td><?php echo $casa -> precio;?></td>
                         <td style="text-align:center;"><?php echo $casa -> recamaras;?></td>
                         <td style="text-align:center;"><?php echo $casa -> baños;?></td>
-                        <td><a style="background-color: #FBDB48;color: white;padding: 8px 20px;border: none;border-radius: 8px;cursor: pointer;float:  right;font-weight:bold;"
-                         href="<?php echo constant('URL') . 'admin/verCasa/' . $casa -> casa_id;?>">Editar</a></td>
-                        <td><a" style="background-color: #EA4C46;color: white;padding: 8px 20px;border: none;border-radius: 8px;cursor: pointer;float:  right;font-weight:bold;"
-                         href="<?php echo constant('URL') . 'admin/eliminarCasa/' . $casa ->casa_id;?>">Eliminar</a></td>
                     </tr>
                     <?php } ?>
                     </tbody>
