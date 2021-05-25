@@ -55,6 +55,19 @@ body{
     left: 0px;
 }
 
+#icon{
+    background-image: url(../img/document.png);
+    width: 20px;
+}
+
+#btn_ficha{
+    background-color: #ebeeeb;
+    color: white;padding: 8px 8px;
+    border: none;border-radius: 8px;
+    cursor: pointer;float:  right;
+    font-weight:bold;
+}
+
 #btn_registrar{
     background-color: #4CAF50;
     color: white;padding: 8px 20px;

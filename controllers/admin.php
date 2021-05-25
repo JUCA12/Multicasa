@@ -93,10 +93,10 @@ class Admin extends Controller{
         $casa_id = $param[0];
         if($this -> model -> delete($casa_id)){
             $this -> view -> mensaje = "Casa eliminado correctamente";
+            $this ->render('admin/index');
         }else{
             $this -> view -> mensaje = "Casa no eliminada ";
         }
-        $this ->render('admin/index');
     }
 
    

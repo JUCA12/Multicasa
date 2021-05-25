@@ -38,6 +38,34 @@ class clienteModel extends Model{
         }
     }
 
+    public function get_data($id){
+        //creamos un objeto de la clase catalogo 
+        $item = new Casa();
+        //hacemos la peticion a la base de datos 
+        $query = $this -> db-> connect() ->prepare("SELECT * FROM casa WHERE ID_CASA = :Id_casa");
+        try{
+            //ejecuta la peticion a la base de datos 
+            $query -> execute(['Id_casa' => $id]);
+            while($row = $query -> fetch()){
+                // a las propiedades de catalogo las llenamos con la base de datos                
+                $item -> casa_id = $row['Id_casa'];
+                $item -> nombre = $row['Nombre'];
+                $item -> calle_num = $row['CalleYNumero'];
+                $item -> colonia = $row['Colonia'];
+                $item -> ciudad = $row['Ciudad'];
+                $item -> estado = $row['Estado'];
+                $item -> cp = $row['CP'];
+                $item -> imagen = $row['Imagen'];
+                $item -> precio = $row['Precio'];
+                $item -> recamaras = $row['recamaras'];
+                $item -> baños = $row['baños'];
+            }
+            return $item;
+        }catch(PDOExcexption $e){
+            return [];
+        }
+    }
+
     /*
     public function test($item){
         $items = [];

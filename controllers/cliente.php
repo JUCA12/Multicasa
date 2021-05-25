@@ -9,6 +9,23 @@ class Cliente extends Controller{
         $this -> view ->render('cliente/index');
         
     }
+
+    function verFicha($param = null){
+        $casa_id = $param[0];
+        //manda el parametro con el model a la funcion getById
+        $casa = $this -> model -> get_data($casa_id);
+        //crear una sesion para seguridad de datos
+        session_start();
+        //creamos una variable de session
+        $_SESSION['id_verCasa'] = $casa -> casa_id;
+        //carga el modelo en la vista 
+        $this -> view -> casa = $casa;
+        //cargar el mensaje en la vista 
+        $this -> view -> mensaje ="";
+
+        $this -> view ->render('cliente/ficha');
+
+    }
     
     function searchById(){
         $cep = $_POST['txt_CEP'];

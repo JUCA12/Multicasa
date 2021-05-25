@@ -56,6 +56,9 @@
                         <td><?php echo $casa -> precio;?></td>
                         <td style="text-align:center;"><?php echo $casa -> recamaras;?></td>
                         <td style="text-align:center;"><?php echo $casa -> baños;?></td>
+                        <td><a style="background-color: #FBDB48;color: white;padding: 8px 8px;border: none;border-radius: 8px;cursor: pointer;float:  right;font-weight:bold;"
+                         href="<?php echo constant('URL') . 'cliente/verFicha/' . $casa -> casa_id;?>">
+                         <i style="color: #EEEEEE;background-image: url(../img/document.png);"></i></a></td>
                     </tr>
                     <?php } ?>
                     </tbody>
